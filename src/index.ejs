@@ -48,7 +48,7 @@
     {
       "imports": {
         "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@hackftz/root-config": "//localhost:9000/hackftz-root-config.js"
+        "@hackftz/root-config": "//localhost:90/hackftz-root-config.js"
       }
     }
   </script>
@@ -57,7 +57,7 @@
       {
         "imports": {
           "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-          "@hackftz/root-config": "//localhost:9000/hackftz-root-config.js"
+          "@hackftz/root-config": "//localhost:90/hackftz-root-config.js"
         }
       }
     </script>
@@ -69,14 +69,14 @@
   -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script> -->
 
-  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
   <% if (isLocal) { %>
-  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.2/dist/system.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.2/dist/extras/amd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.2/dist/system.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.2/dist/extras/amd.js"></script>
   <% } else { %>
-  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@1.16.0/dist/import-map-overrides.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.2/dist/system.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.2/dist/extras/amd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@1.16.0/dist/import-map-overrides.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.2/dist/system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.2/dist/extras/amd.min.js"></script>
   <% } %>
 
   <template id="single-spa-layout">
