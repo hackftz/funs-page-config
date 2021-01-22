@@ -34,7 +34,9 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.8.2/lib/system/single-spa.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.8.2/lib/system/single-spa.min.js",
+        "react": "https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js"
       }
     }
   </script>
@@ -43,12 +45,14 @@
   <!-- Add your organization's prod import map URL to this script's src  -->
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
 
+  
+
   <% if (isLocal) { %>
   <script type="systemjs-importmap">
     {
       "imports": {
         "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@hackftz/root-config": "//localhost:90/hackftz-root-config.js"
+        "@hackftz/root-config": "//localhost:10000/hackftz-root-config.js"
       }
     }
   </script>
@@ -57,7 +61,7 @@
       {
         "imports": {
           "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-          "@hackftz/root-config": "//localhost:90/hackftz-root-config.js"
+          "@hackftz/root-config": "//localhost:10000/hackftz-root-config.js"
         }
       }
     </script>
@@ -81,12 +85,13 @@
 
   <template id="single-spa-layout">
     <single-spa-router>
-      <!-- <nav>
-        <application name="@<%- orgName %>/navbar"></application>
-      </nav> -->
+      <nav>
+        <!-- <application name="@hackftz/navbar"></application> -->
+      </nav>
       <main>
         <route default>
           <application name="@single-spa/welcome"></application>
+          <!-- <application name="@hackftz/single-spa-project-test"></application> -->
         </route>
       </main>
     </single-spa-router>
